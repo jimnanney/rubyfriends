@@ -53,7 +53,7 @@ module Rubyfriends
     config.assets.enabled = true
 
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.0'
+    config.assets.version = '1.1'
 
     config.generators do |g|
       g.stylesheets false
@@ -62,7 +62,5 @@ module Rubyfriends
       g.test_framework nil
     end
 
-    # Fix for Heroku asset compilation
-    config.assets.initialize_on_precompile = false
   end
 end
