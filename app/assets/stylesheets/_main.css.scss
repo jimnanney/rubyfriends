@@ -10,6 +10,77 @@
   }
 } //#wrapper
 
+$dark-text: #3c3c3c;
+$link-color: #918f5e;
+$dark-blue: #3f414d;
+
+header#site_header {
+  width: 100%;
+  max-height: 470px;
+  background: url(image-path("header.jpg")) no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  overflow-y: hidden;
+  position: relative;
+  margin-bottom: 3%;
+  h1 {
+    display: block;
+    margin: auto;
+    padding: 7% 0 0 0;
+    margin-bottom: 10%;
+  }
+  a {
+    color: $link-color;
+    font-family: "proxima_nova_rgbold";
+  }
+}
+
+.logo {
+  width: 35%;
+  margin-bottom: 10%;
+}
+
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: auto;
+  position: relative;
+  z-index: 1000;                                                                                                                         
+  @include clearfix;
+  .container {
+    margin-top: 1%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#site_header .button {
+  text-decoration: none;
+  font-weight: normal;
+  width: 150px;
+  height: 40px;
+  padding: 11px 26px;
+  font-size: 14px;
+  border: 2px solid white;
+  border-radius: 4px;
+  float: right;
+  font-family: "proxima_novablack", sans-serif;
+  color: white;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: 4px;
+  position: relative;
+  display: block;
+  top: 40px;
+  @include transition(all 0.3s);
+  &:hover {
+    background: white;
+    color: $dark-text;
+  }
+}
+
 header#page_header {
   h1 {
     @include span-columns(4);
@@ -114,3 +185,74 @@ hr {
   width: 100%;
   display: hidden;
 }
+nav {
+  text-align: center;
+  ul {
+    margin: 0;
+  }
+  ul li {
+    display: inline-block;
+    margin: 15px 8px;
+    a {
+      color: $link-color;
+      display: inline-block;
+      padding: 8px 20px;
+      border: 2px $link-color solid;
+      border-radius: 4px;
+      line-height: 1.2;
+      font-size: 14px;
+      font-family: "proxima_novablack", sans-serif;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      @include transition(all 0.3s);
+      &:hover {
+        color: white;
+        border: 2px $link-color solid;
+        border-radius: 4px;
+        background-color: $link-color;
+      }
+    }
+  }
+}
+
+h1 {
+  font-family: "proxima_novablack", sans-serif;
+  color: #3c3c3c;
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#sponsors {
+  clear: both;
+}
+@media screen and (max-width: 767px) {
+  body {
+    padding: 0;
+  }
+  nav ul li {
+    display: block;
+    margin: 15px;
+    a {
+      width: 100%;
+    }
+  }
+  #wrapper {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  body {
+    padding: 0;
+  }
+  h1.logo {
+    float: left;
+    margin: 1% 0 10% 3%;
+  }
+  .button {
+    top: 52px;
+    right: 6px;
+  }
+}
+

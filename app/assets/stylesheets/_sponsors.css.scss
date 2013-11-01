@@ -1,0 +1,98 @@
+section#sponsors {
+  text-align: center;
+  .partysponsor {
+    img {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+
+  .boatsponsors {
+    text-align: center;
+    margin: 4% auto 5%;
+    width: 90%;
+    max-width: 796px;
+    @include clearfix;
+    a {
+      display: block;
+      border: none;
+  }
+  ul {
+    display: inline-block;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+    margin: 0 30px 30px;
+    li {
+      vertical-align: middle;
+      padding: 15px 15px;
+      display: inline-block;
+      a {
+        border: none;
+        img {
+          max-width: 200px;
+          max-height: 200px;
+        }
+      }
+    }
+  }
+}
+
+}
+
+.sponsor {
+  margin-right: 20px;
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+
+footer {
+  width: 94%;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 6%;
+}
+
+@media screen and (max-width: 690px) {
+  .feature {
+    float: none;
+    width: 100%;
+    padding: 0 3%;
+    @include clearfix;
+    &:first-child {
+      padding: 0 3%;
+    }
+    &:last-child {
+      padding: 0 3%;
+    }
+  }
+  .sponsors {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .sponsors {
+    width: 250px;
+  }
+  .sponsor {
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .neo {
+      width: 146px;
+    }
+    .neo, .dockyard, .github, .bluebox {
+      width: 146px;
+      margin-left: 5px; 
+      background-size: 100%;
+    }
+    .pivotal, .hashrocket, .engineyard {
+      width: 180px;
+      background-size: 100%;
+    }
+  }
+}
