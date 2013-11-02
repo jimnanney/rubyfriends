@@ -10,24 +10,21 @@
   %body
     %header#site_header
       %div.container
-        = link_to "REGISTER", "http://rubyonsails-ww.eventbrite.com", class: "button"
+        -#= link_to "REGISTER", "http://rubyonsails-ww.eventbrite.com", class: "button"
         %h1.logo
           = image_tag asset_path("logo.png"), alt: "Ruby On Sails Logo"
-    #wrapper
+    .wrapper
       %header#page_header
         %nav
           %ul
             %li=link_to "Home", root_path
-            %li=link_to "Register", ""
+            %li=link_to "Register", "http://rubyonsails-ww.eventbrite.com"
             %li=link_to "#RubyOnSails", tweets_url
-        %h1= link_to "#RubyOnSails", root_path
-        .feed
-          = link_to image_tag('twitter_icon_grey.png'), twitter_url
-          = link_to image_tag('feed_icon_grey.png'), tweets_url(format: :atom)
-      %section#main{ role: :main }
-        = yield
-      %section#sponsors
-        = render "layouts/sponsors"
+        -# %h1= link_to "#RubyOnSails", root_path
+    %section#main{ role: :main }
+      = yield
+    %section#sponsors
+      = render "layouts/sponsors"
     = javascript_include_tag :application
     = yield :javascripts
     = render 'shared/ga'

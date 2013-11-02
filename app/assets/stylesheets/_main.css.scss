@@ -1,18 +1,36 @@
-#wrapper {
-  @include container;
-  // @include susy-grid-background;
-  // @include debug-vertical-alignment;
-
-  @include at-breakpoint($full-break) {
-    @include set-container-width;
-    // @include susy-grid-background;
-    // @include debug-vertical-alignment;
-  }
-} //#wrapper
-
 $dark-text: #3c3c3c;
 $link-color: #918f5e;
 $dark-blue: #3f414d;
+p {
+  font-size: 16px;
+  font-family: "proxima_nova_rgregular", sans-serif;
+  line-height: 1.4;
+}
+a {
+  font-family: "proxima_nova_rgbold";
+  font-weight: normal;
+  font-size: 100%;
+  color: $link-color;
+  &:hover {
+    color: ($link-color * 1.3);
+    text-decoration: none;
+  }
+}
+
+.wrapper {
+  @include container;
+  @include at-breakpoint($full-break) {
+    @include set-container-width;
+  }
+  margin-top: 3%;
+  margin-bottom: 3%;
+} 
+
+.dark {
+  background-color: $dark-blue;
+  padding: 5% 0;
+  margin: 3% 0;
+}
 
 header#site_header {
   width: 100%;
@@ -103,10 +121,15 @@ header#page_header {
 section#main {
   @include span-columns($total-columns);
   .hero-unit {
+    text-align: center;
+    background-color: white;
     float:left;
-    width:90%;
+    width:100%;
     padding:10px 5%;
     position:relative;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
     a#learn-more {
       @include margin-leader(0.5);
       @include margin-trailer(0.5);
@@ -137,9 +160,7 @@ section#main {
     span.shared-smiles-count {
       @extend .label;
       @extend .label-info;
-      position:absolute;
-      right:10px;
-      bottom:10px;
+      background-color: $link-color;
     } //span.shared-smiles-count
 
   } //.hero-unit
@@ -148,6 +169,10 @@ section#main {
     @include no-list;
     @include span-columns($total-columns);
     li {
+      border: 2px ($dark-blue * 1.4) solid;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
       @include span-columns(3);
       &.two, &.four {
         @include omega;
@@ -159,15 +184,15 @@ section#main {
         } //&.two
       }
       @include margin-trailer(1);
-      background-color:$grayLighter;
+      background-color:($dark-blue * 1.2);
 
       &.one, &.three {
-        background-color:$grayLighter;
+        background-color:($dark-blue * 1.2);
       } //&.two, &.four
 
       .text {
         margin: 1em;
-
+        color: white;
         .username {
           font-size: 1.5em;
         }
@@ -198,6 +223,8 @@ nav {
       display: inline-block;
       padding: 8px 20px;
       border: 2px $link-color solid;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
       border-radius: 4px;
       line-height: 1.2;
       font-size: 14px;
@@ -221,38 +248,5 @@ h1 {
   font-size: 30px;
   margin-bottom: 20px;
   text-align: center;
-}
-
-#sponsors {
-  clear: both;
-}
-@media screen and (max-width: 767px) {
-  body {
-    padding: 0;
-  }
-  nav ul li {
-    display: block;
-    margin: 15px;
-    a {
-      width: 100%;
-    }
-  }
-  #wrapper {
-    padding: 0 20px;
-  }
-}
-
-@media screen and (max-width: 590px) {
-  body {
-    padding: 0;
-  }
-  h1.logo {
-    float: left;
-    margin: 1% 0 10% 3%;
-  }
-  .button {
-    top: 52px;
-    right: 6px;
-  }
 }
 

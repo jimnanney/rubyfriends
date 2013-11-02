@@ -29,3 +29,34 @@
     } //img
   } //#overlay
 }
+
+@media screen and (max-width: 767px) {
+  body {
+    padding: 0;
+  }
+  nav ul li {
+    display: block;
+    margin: 15px;
+    a {
+      width: 100%;
+    }
+  }
+  #wrapper {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  body {
+    padding: 0;
+  }
+  h1.logo {
+    float: left;
+    margin: 1% 0 10% 3%;
+  }
+  .button {
+    top: 52px;
+    right: 6px;
+  }
+}
+
