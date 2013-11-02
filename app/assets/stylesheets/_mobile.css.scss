@@ -1,4 +1,11 @@
 @media screen and (max-width: $mobile-width) {
+  .feature {
+    clear: both;
+    margin: 0px auto 40px;
+    width: 100%;
+    max-width: 500;
+  }
+
   section.partysponsor{
     padding: 0 20px;
   }
