@@ -19,12 +19,13 @@
           %ul
             %li=link_to "Home", root_path
             %li=link_to "Register", "http://rubyonsails-ww.eventbrite.com"
-            %li=link_to "#RubyOnSails", tweets_url
-        -# %h1= link_to "#RubyOnSails", root_path
+            %li=link_to "#Tweets", tweets_url
     %section#main{ role: :main }
       = yield
     %section#sponsors
       = render "layouts/sponsors"
+    %footer
+      = render "layouts/footer"
     = javascript_include_tag :application
     = yield :javascripts
     = render 'shared/ga'
