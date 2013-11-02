@@ -1,4 +1,7 @@
 @media screen and (max-width: $mobile-width) {
+  section.partysponsor{
+    padding: 0 20px;
+  }
   .wrapper {
     padding: 0 20px;
   } //#wrapper
@@ -28,12 +31,20 @@
       border: 0;
     } //img
   } //#overlay
+  img {
+    padding: 0;
+    border: 0;
+  } //img
 }
 
 @media screen and (max-width: 767px) {
   body {
     padding: 0;
   }
+  img {
+    padding: 0;
+    border: 0;
+  } //img
   nav ul li {
     display: block;
     margin: 15px;
