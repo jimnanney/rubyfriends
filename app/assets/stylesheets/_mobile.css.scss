@@ -19,6 +19,9 @@
     #smiles-list {
       li {
         @include span-columns($total-columns);
+        img {
+          width: 100%;
+        }
       } //li
     } //#smiles-list
   } //section#main
